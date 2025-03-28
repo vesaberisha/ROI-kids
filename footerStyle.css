@@ -127,3 +127,50 @@ footer {
     text-align: right; 
     margin-right: 0; 
 }
+
+@media (min-width: 1069px) and (max-width: 1286px) {
+    #courses .footer-links a {
+    
+    width: 50%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1070px){
+    .footer-container {
+        align-items: left;
+        text-align: left; 
+    }
+    
+    .footer-section {
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 0;
+        text-align: left; 
+    }
+
+    #roi-kids-logo {
+        margin-left: 0; 
+    }
+    
+    #quick-links{
+        margin-left: 0;
+    }
+    
+    #courses h3, #quick-links h3 {
+        text-align: right; 
+    }
+    
+    #courses .footer-links, #quick-links .footer-links {
+        align-items: flex-end;   
+    }
+    
+    .icon-section {
+        padding: 20px 0; 
+        text-align: left;
+    }
+    
+    .social-icons {
+        justify-content: flex-start; 
+    }
+}

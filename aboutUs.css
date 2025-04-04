@@ -41,7 +41,7 @@ body {
 }
 
 .hero {
-    background: url('/assests/aboutUs1.jpg') no-repeat center top 60%/cover;
+    background: url('assests/aboutUs1.jpg') no-repeat center top 60%/cover;
     height: 400px;
     display: flex;
     align-items: center;
@@ -185,7 +185,7 @@ blockquote span {
 .graduates {
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/assests/aboutUs3.jpg') no-repeat center top 50%/cover;
+        url('assests/aboutUs3.jpg') no-repeat center top 50%/cover;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;

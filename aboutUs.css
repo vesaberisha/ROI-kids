@@ -1,0 +1,687 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #432;
+    padding: 5px 80px;
+    color: white;
+}
+
+#roi-kids-logo {
+    width: 65px;
+    height: auto;
+}
+
+.nav a {
+    color: white;
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+.register-btn {
+    background: #ffffff;
+    color: black;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 35px;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('/assests/aboutUs1.jpg') no-repeat center top 60%/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px;
+    background: white;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+}
+
+.slider-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(77, 75, 75, 0.744);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-btn.prev {
+    left: 20px;
+}
+
+.slider-btn.next {
+    right: 20px;
+}
+
+blockquote {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.6;
+    color: #555;
+}
+
+blockquote span {
+    display: block;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.awards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 100px 0;
+    color: black;
+}
+
+.premium-awards {
+    background: #432;
+    color: white;
+    text-align: right;
+    padding: 50px;
+    color: #d3d2d2;
+}
+
+.premium-awards button {
+    background: #ffffff;
+    color: #432;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 35px;
+    cursor: pointer;
+}
+
+.premium-awards h1 {
+    margin-bottom: 40px;
+    color: white;
+}
+
+.premium-awards p {
+    margin-bottom: 40px;
+}
+
+.award-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.award-card i {
+    display: block;
+    margin: 25px auto;
+    font-size: 48px;
+}
+
+.graduates {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/assests/aboutUs3.jpg') no-repeat center top 50%/cover;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 300px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.passed-graduates {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.passed-graduates i {
+    margin-bottom: 80px;
+    font-size: 36px;
+}
+
+.fa-users {
+    color: rgb(132, 171, 181);
+}
+
+.fa-graduation-cap {
+    color: rgb(234, 85, 85);
+}
+
+.fa-pen-to-square {
+    color: rgb(148, 225, 225);
+}
+
+.passed-graduates .fa-trophy {
+    color: rgb(214, 214, 121);
+}
+
+.passed-graduates p {
+    color: #d3d2d2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.passed-graduates p span {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.passed-graduates p span::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 5px;
+    background-color: #432;
+    margin-top: 5px;
+}
+
+.team {
+    text-align: center;
+    padding: 40px;
+}
+
+.team h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.team h2::after {
+    content: "";
+    display: block;
+    width: 35%;
+    height: 5px;
+    background-color: #432;
+    margin: 10px auto 0;
+}
+
+.team p {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+}
+
+.team-members img {
+    width: 80%;
+    border: 8px solid #432;
+    border-radius: 50%;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 90px;
+    background: #432;
+    color: white;
+}
+
+.newsletter-input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.newsletter-signUp {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.newsletter-signUp i {
+    font-size: 28px;
+}
+
+.newsletter input {
+    padding: 15px 150px 15px 15px;
+    margin: 0 10px;
+    width: 400px;
+    border: 1px solid white;
+    background-color: #432;
+    border-radius: 25px;
+    color: white;
+}
+
+.newsletter button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: #432;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        position: relative;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+        padding: 10px;
+    }
+    
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #432;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav a, .register-btn {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .content {
+        padding: 60px 10px;
+    }
+    
+    blockquote {
+        width: 90%;
+    }
+    
+    .awards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .premium-awards {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .award-card {
+        width: 100%;
+        padding: 30px 100px;
+    }
+    
+    .graduates {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        text-align: center;
+        height: 600px;
+    }
+    
+    .passed-graduates {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .passed-graduates i {
+        margin-bottom: 10px;
+        align-items: center;
+        font-size: 40px;
+    }
+    
+    .passed-graduates p span, .passed-graduates p span::after {
+        text-align: center;
+        align-self: center;
+    }
+    
+    .passed-graduates p span::after {
+        width: 100%;
+    }
+    
+    .team p {
+        width: 70%;
+    }
+    
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-signUp {
+        margin-bottom: 20px;
+    }
+    
+    .newsletter-input-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .newsletter input {
+        width: 70%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .header {
+        position: relative;
+        padding: 5px 20px;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #432;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav a, .register-btn {
+        display: block;
+        margin: 10px auto;
+        width: 30%;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .hero {
+        height: 200px;
+        font-size: 28px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .content {
+        padding: 30px 20px;
+        gap: 30px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .slider-container {
+        height: 250px;
+        width: 100%;
+    }
+    
+    .slider-image {
+        height: 250px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    blockquote {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    
+    .awards {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    
+    .premium-awards {
+        order: 1;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .award-card {
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .award-card > div:nth-child(4) {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    .award-card > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .award-card i {
+        font-size: 36px;
+        margin: 10px auto;
+    }
+    
+    .graduates {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 30px 10px;
+    }
+    
+    .passed-graduates {
+        flex-direction: column;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .passed-graduates i {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    
+    .passed-graduates p {
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .passed-graduates p span {
+        font-size: 24px;
+    }
+    
+    .passed-graduates p span::after {
+        margin: 5px auto 0;
+    }
+    
+    .team {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .team p {
+        width: 90%;
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .team-members {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-members img {
+        width: 60%;
+        max-width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .newsletter {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .newsletter-signUp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 0;
+        order: 1;
+    }
+    
+    .newsletter-input-container {
+        width: 100%;
+        order: 2;
+        position: relative;
+    }
+    
+    .newsletter input {
+        width: 100%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        margin: 0;
+        border-radius: 25px;
+    }
+    
+    .newsletter button {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 12px 22px;
+        margin-top: 0;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+}

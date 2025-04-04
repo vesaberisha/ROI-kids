@@ -1,0 +1,264 @@
+body{
+    margin: 0;
+}
+footer {
+    background-color: #1e283c;
+    padding-top: 70px;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.footer-container .footer-section #roi-kids-logo {
+    width: 65px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 22px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.footer-section p {
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+}
+
+.footer-section a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    width: 50%;
+}
+
+.footer-section a:hover {
+    color: #74425d;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#quick-links {
+    margin-left: 300px; 
+    padding-left: 40px; 
+}
+
+#courses {
+    text-align: right;
+}
+
+.footer-section .icon-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-section .icon-section i {
+    font-size: 48px;
+    color: #74425d;
+    margin-top: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    background-color: #4B5363;
+    border-radius: 50%;
+    padding: 25px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#courses .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#courses .footer-links a {
+    text-align: start;
+    margin-left: 0;
+    width: 30%;
+}
+
+#courses h3 {
+    text-align: right; 
+    margin-right: 0; 
+}
+
+@media (min-width: 1069px) and (max-width: 1286px) {
+    #courses .footer-links a {
+    
+    width: 50%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1070px){
+    .footer-container {
+        align-items: left;
+        text-align: left; 
+    }
+    
+    .footer-section {
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 0;
+        text-align: left; 
+    }
+
+    #roi-kids-logo {
+        margin-left: 0; 
+    }
+    
+    #quick-links{
+        margin-left: 0;
+    }
+    
+    #courses h3, #quick-links h3 {
+        text-align: right; 
+    }
+    
+    #courses .footer-links, #quick-links .footer-links {
+        align-items: flex-end;   
+    }
+    
+    .icon-section {
+        padding: 20px 0; 
+        text-align: left;
+    }
+    
+    .social-icons {
+        justify-content: flex-start; 
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+     .footer-section #roi-kids-logo {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .icon-section {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .icon-section i {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    .icon-section p{
+        text-align: start;
+    }
+
+    .social-icons {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-section .social-icons i {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .footer-section h3 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #quick-links, #courses {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #courses h3{
+        text-align: center;
+    }
+
+    #courses .footer-links a{
+        text-align: center;
+        width: 100%;
+    }
+
+    #courses {
+        margin-bottom: 50px;
+    }
+
+    .copyright {
+        padding: 50px;
+        font-size: 14px;
+        width: auto; 
+    }
+
+    #phone-section{
+        margin-right: 50px;
+    }
+}

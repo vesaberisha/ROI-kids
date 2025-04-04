@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="aboutUs.css">
+    <script src="https://kit.fontawesome.com/de7494459c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <img id="roi-kids-logo" src="/assests/roi-kids-logo.png" alt="ROI Kids Logo">
+        <button class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">GALLERY</a>
+            <a href="#">COURSE</a>
+            <button class="register-btn">Register Now</button>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>ABOUT US</h1>
+    </section>
+    
+    <section class="content">
+        <div class="image-slider">
+            <div class="slider-container">
+                <img src="assests/aboutUs2.jpg" alt="Slide 1" class="slider-image active">
+                <img src="assests/aboutUs1.jpg" alt="Slide 2" class="slider-image">
+                <img src="assests/aboutUs3.jpg" alt="Slide 3" class="slider-image">
+        
+                <button class="slider-btn prev" onclick="moveSlide(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" onclick="moveSlide(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <blockquote>
+            "Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis ndum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit et nibh vulputate cursus a sit amet mauris. This is Photoshop's version of Lorem um. Proin gravida nibh vel velit auctor aliquet."
+            <span>- By Jennifer Doe (Director)</span>
+        </blockquote>
+    </section>
+    
+    <section class="awards">
+        <div class="premium-awards">
+            <h1>Premium Awards</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita accusamus temporibus explicabo sint ullam labore ipsam incidunt.</p>
+            <button>Join Now</button>
+        </div>
+        <div class="award-card">
+            <div class="best-css">
+                <i class="fa-solid fa-award"></i>
+                <p>Best CSS</p>
+            </div>
+            <div class="quality-items">
+                <i class="fa-solid fa-medal"></i>
+                <p>Quality Items</p>
+            </div>
+            <div class="good-author">
+                <i class="fa-solid fa-trophy"></i>
+                <p>Good Author</p>
+            </div>
+            <div class="reliability">
+                <i class="fa-solid fa-star"></i>
+                <p>Reliability</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="graduates">
+        <div class="passed-graduates">
+            <i class="fa-solid fa-users"></i>
+            <p><span>2540</span><br>Passed Graduates</p>
+        </div>
+        <div class="passed-graduates">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <p><span>2540</span><br>Passed Graduates</p>
+        </div>
+        <div class="passed-graduates">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <p><span>2540</span><br>Passed Graduates</p>
+        </div>
+        <div class="passed-graduates">
+            <i class="fa-solid fa-trophy"></i>
+            <p><span>2540</span><br>Passed Graduates</p>
+        </div>
+    </section>
+
+    <section class="team">
+        <h2>OUR SPECIAL TEAM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur vel libero, praesentium quasi aut placeat eum reprehenderit ad voluptatibus fuga.</p>
+        <div class="team-members">
+            <img src="/assests/teamMember1.jpg" alt="Team Member">
+            <img src="/assests/teamMember2.jpg" alt="Team Member">
+            <img src="/assests/teamMember3.jpg" alt="Team Member">
+            <img src="/assests/teamMember4.jpg" alt="Team Member">
+        </div>
+    </section>
+    
+    <footer class="newsletter">
+        <div class="newsletter-signUp">
+            <i class="fa-solid fa-envelopes-bulk"></i>
+            <p>SIGN UP FOR NEWSLETTER</p>
+        </div>
+        <div class="newsletter-input-container">
+            <input type="email" placeholder="you@company.com">
+            <button>Submit Form</button>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('active');
+        }
+        
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-image');
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+    
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
